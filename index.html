@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Professional Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f4f5f6;
+            --text-color: #1a1a1a;
+            --text-muted: #666666;
+            --accent-color: #2563eb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-color);
+        }
+
+        .item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .item-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .item-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 1.5rem 0.5rem; }
+            section { padding: 1.5rem; }
+            .item-header { flex-direction: column; }
+            .item-date { margin-top: 0.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">Your Profession / Academic Title</p>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief intro here. Mention your core expertise, interests, and what drives you professionally. Keep it concise, around 3-4 sentences.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Senior Role / Title</span>
+                    <span class="item-date">2024 — Present</span>
+                </div>
+                <div class="item-meta">Company Name · Full-time</div>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">Led the development of core platforms, optimizing performance by 40%.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Previous Role / Title</span>
+                    <span class="item-date">2022 — 2024</span>
+                </div>
+                <div class="item-meta">Company Name · Internship</div>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">Built interactive web components and collaborated with design teams.</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">M.S. in Computer Science</span>
+                    <span class="item-date">2020 — 2022</span>
+                </div>
+                <div class="item-meta">University Name</div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">B.S. in Major Name</span>
+                    <span class="item-date">2016 — 2020</span>
+                </div>
+                <div class="item-meta">University Name</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project Name One</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">A high-performance tool built to solve a specific industry problem. Tech stack: React, Go.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Name Two</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">An open-source data package for automating developer workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Connect</h2>
+            <p style="margin-bottom: 1rem;">Let's get in touch! Drop me an email or find me on social platforms.</p>
+            <div class="links">
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
